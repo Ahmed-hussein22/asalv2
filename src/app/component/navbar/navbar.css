@@ -1,0 +1,91 @@
+.navbar {
+  height: 10vh;              /* 20% من ارتفاع الشاشة */
+  background: linear-gradient(135deg , #2a5298 ,#4168ca); /* لون جذاب */
+  padding: 0 30px;
+}
+
+/* ضبط المحتوى جوه الناف */
+.navbar .container-fluid {
+  height: 100%;
+  display: flex;
+  align-items: center;       /* توسيط عمودي */
+}
+
+/* اللوجو */
+.navbar-brand {
+  color: #fff !important;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* اللينكات */
+.navbar-nav .nav-link {
+  color: #eee !important;
+  margin: 0 10px;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+/* hover effect */
+.navbar-nav .nav-link:hover {
+  color: #ffd369 !important;
+}
+
+/* اللينك النشط */
+.navbar-nav .nav-link.active {
+  color: #ffd369 !important;
+  border-bottom: 2px solid #ffd369;
+}
+
+/* البحث */
+form .form-control {
+  border-radius: 20px;
+}
+
+form .btn {
+  border-radius: 20px;
+  border-color: #ffd369;
+  color: #ffd369;
+}
+
+form .btn:hover {
+  background-color: #ffd369;
+  color: #000;
+}  
+
+/* تكبير حجم القائمة */
+.dropdown-menu {
+  border-radius: 15px;
+  border: none;
+  padding: 15px 0;
+  background: #fff0f5;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  min-width: 220px;   /* كبرنا العرض */
+}
+
+/* العناصر */
+.dropdown-item {
+  font-size: 19px;     /* تكبير الخط */
+  padding: 12px 25px;  /* مساحة أكبر */
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+/* hover احترافي */
+.dropdown-item:hover {
+
+  color: #fff;
+  border-radius: 10px;
+  transform: translateX(5px); /* حركة بسيطة */
+}
+
+/* مسافة بين العناصر */
+.dropdown-item + .dropdown-item {
+  margin-top: 5px;
+}
+
+/* اللينك نفسه */
+.nav-link.dropdown-toggle {
+  font-size: 21px;
+  font-weight: 600;
+}

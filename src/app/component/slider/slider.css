@@ -1,0 +1,16 @@
+.slider-wrapper {
+  width: 80vw;        /* ياخد عرض الشاشة بالكامل */
+  height: 80vh;         /* 8% من ارتفاع الشاشة */
+  margin: 0 auto;
+  overflow: hidden;
+ margin-top: 10vh;
+ margin-bottom: 10vh;
+}
+
+.slider-wrapper img {
+  width: 10%;
+  height: 10%;
+  object-fit: cover;     /* أهم حاجة */
+  object-position: center; /* يخلي التركيز في النص */
+  display: block;        /* يمنع أي فراغ تحت الصورة */
+}
