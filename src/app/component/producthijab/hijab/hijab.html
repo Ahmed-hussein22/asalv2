@@ -1,0 +1,62 @@
+
+<div class="container mt-3 mb-3">
+ <select class="form-select w-auto" [(ngModel)]=" selectedCategory">
+    <option value="all">الجميع</option>
+    <option value="dresses">دريسات</option>
+    <option value="hejab">خمار</option>
+    <option value="nekab">نقاب</option>
+  </select>
+</div>
+
+<div class="container py-4">
+  <div class="row g-4">
+    @for(p of products; track $index){ 
+    @if (selectedCategory==p.catogry || selectedCategory=="all" ) {
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+
+        
+        <div class="product-card">
+            
+          <div class="img-wrap">
+
+          
+            
+           <img [src]="p.imge" [routerLink]="['/hijabdetals', p.id]" [alt]="p.name">
+            
+       
+
+          </div>
+          <div class="card-body">
+            <p class="product-name">{{ p.name }}</p>
+                 @if (p.instock) {
+            <span  class="badge bg-primary" id="instock">متوفر</span>
+          }
+          @else 
+          {
+
+          <span class="badge bg-secondary"  id="instock">غير متوفر</span>
+          }
+            <div class="card-footer-row">
+              <span class="product-price" [style.color]="p.price>100?'red' :'green'">{{ p.price  }}</span>
+               
+                     <button class="add-btn"[disabled]="!p.instock" (click)="alirt(p.id)" >أضف للسلة</button>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+       
+    }}
+    @empty {
+
+        <div>
+            <p>this product is empity </p>
+        </div>
+    }
+
+
+               
+
+  </div>
+</div>

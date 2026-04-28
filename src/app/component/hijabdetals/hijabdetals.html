@@ -1,0 +1,9 @@
+<div class="card" style="width: 18rem;" appHover>
+  <img [src]="product.imge" class="card-img-top" [alt]="product.name">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.description | shortdesc }}</p>
+    <p>{{ product.rate | star }}</p>
+    <a routerLink="/hijab" class="btn btn-primary">Go all hijab</a>
+  </div>
+</div>
